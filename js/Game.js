@@ -54,7 +54,7 @@ class Game {
       var index = 0;
 
       //x and y position of the cars
-      var x = 175;
+      var x = 180;
       var y;
 
       for(var plr in allPlayers){
@@ -63,17 +63,20 @@ class Game {
         index = index + 1 ;
 
         //position the cars a little away from each other in x direction
-        x = x + 200;
+        x = x + 250;
         //use data form the database to display the cars in y direction
         y = displayHeight - allPlayers[plr].distance;
         cars[index-1].x = x;
         cars[index-1].y = y;
+        //index - 1 means its index number of the current car
 
         if (index === player.index){
-          cars[index - 1].shapeColor = "red";
+          fill("red");
+          ellipse(x,y,100,100);
           camera.position.x = displayWidth/2;
           camera.position.y = cars[index-1].y
         }
+        //inbuilt class that goes through the x and y of your current sprite
        
         //textSize(15);
         //text(allPlayers[plr].name + ": " + allPlayers[plr].distance, 120,display_position)
