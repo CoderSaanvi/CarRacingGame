@@ -37,6 +37,7 @@ class Form {
 //arrow function associates themselves with the entire class,not to individual elements
     this.reset.mousePressed(()=>{
       player.updateCount(0);
+      Player.updateCarsAtEnd(0);
       game.update(0);
       Player.removePlayers();
     })

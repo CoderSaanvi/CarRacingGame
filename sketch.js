@@ -5,6 +5,7 @@ var playerCount;
 var allPlayers;
 var distance = 0;
 var database;
+var carsAtEnd;
 
 var form, player, game;
 
@@ -39,5 +40,9 @@ function draw(){
   if(gameState === 1){
     clear();
     game.play();
+  }
+
+  if(gameState === 2){
+    game.end();
   }
 }
